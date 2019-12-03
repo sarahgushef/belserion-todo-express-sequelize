@@ -38,7 +38,7 @@ const User = sequelize.define(
     }
   },
   {
-    tableName: 'users'
+    // tableName: 'users' // --> You also don't need this if you've already declare table name in define, but if you declare tableName, the model will refer to tableName than what's in define (this case: 'user')
     // timestamp: false --> You don't need this if you've already state createdAt & updatedAT in models
   }
 );
