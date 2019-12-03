@@ -23,5 +23,8 @@ sequelize
 
 // ROUTES
 app.get('/', (req, res) => res.send('Hello world'));
+app.use('/users', require('./routes/users'));
+
+// User Routes
 
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
