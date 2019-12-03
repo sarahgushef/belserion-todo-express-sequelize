@@ -39,6 +39,7 @@ const User = sequelize.define(
   },
   {
     tableName: 'users'
+    // timestamp: false --> You don't need this if you've already state createdAt & updatedAT in models
   }
 );
 
