@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 5000;
+const { PORT } = require('./config') || 5000;
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // CREATE CONNECTION TO DATABASE
-const sequelize = require('./config');
+const { sequelize } = require('./config');
 
 // Testing the Connection
 sequelize

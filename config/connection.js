@@ -1,8 +1,8 @@
 // CREATE CONNECTION TO DATABASE
-require('dotenv').config();
+
+const { DATABASE_HOST } = require('./environment.js');
 
 const Sequelize = require('sequelize');
-const DATABASE_HOST = process.env.DATABASE_HOST;
 
 const sequelize = new Sequelize(DATABASE_HOST, {
   pool: {
